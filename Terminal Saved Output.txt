@@ -1,0 +1,18 @@
+Last login: Thu Jun  4 11:55:43 on ttys000
+legawahyusetiyawan@192 ~ % cd ~
+rm -rf ~/Project/bodyfit-ai
+legawahyusetiyawan@192 ~ % cat > .env.local << 'EOF'
+NEXT_PUBLIC_SUPABASE_URL=https://enpehauetcsqmiblempl.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVucGVoYXVldGNzcW1pYmxlbXBsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NDA3NzEsImV4cCI6MjA5NjExNjc3MX0.XEAWiNC5NVmFkOOJeAjUCTl2dR3LurxTVVWbtYD7UMI
+SUPABASE_SERVICE_ROLE_KEY=eeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVucGVoYXVldGNzcW1pYmxlbXBsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NDA3NzEsImV4cCI6MjA5NjExNjc3MX0.XEAWiNC5NVmFkOOJeAjUCTl2dR3LurxTVVWbtYD7UMI
+OPENAI_API_KEY=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
+OPENAI_MODEL=gpt-4o-mini
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+EOF
+legawahyusetiyawan@192 ~ % open -a TextEdit .env.local
+legawahyusetiyawan@192 ~ % 
+
+
+
+
+
