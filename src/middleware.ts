@@ -1,10 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-/**
- * Refreshes the Supabase session cookie on each request so Server Components
- * always see a valid session. Standard @supabase/ssr middleware pattern.
- */
 export async function middleware(request: NextRequest) {
   let response = NextResponse.next({ request });
 
@@ -14,7 +10,7 @@ export async function middleware(request: NextRequest) {
     {
       cookies: {
         getAll: () => request.cookies.getAll(),
-setAll(cookiesToSet: { name: string; value: string; options?: any }[]) {     
+        setAll(cookiesToSet: { name: string; value: string; options?: Record<string, unknown> }[]) {
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value)
           );
@@ -27,7 +23,6 @@ setAll(cookiesToSet: { name: string; value: string; options?: any }[]) {
     }
   );
 
-  // Touch the session so it refreshes if needed.
   await supabase.auth.getUser();
   return response;
 }
